@@ -1,0 +1,36 @@
+1) Посмотреть где я  - pwd
+2) Создать папку - mkdir Week_nedelya
+3) Зайти в папку - cd Week_nedelya
+4) Создать 3 папки - mkdir Weekdays Monday Weekend
+5) Зайти в любую папку - cd Weekdays
+6) Создать 5 файлов (3 txt, 2 json) - touch Monday.txt Tuesday.txt Wednesday.txt Thursday.json Friday.json 
+7) Создать 3 папки - mkdir Morning Day Evening
+8. Вывести список содержимого папки - ls -la
+9) + Открыть любой txt файл -  nano Monday.txt
+10) + написать туда что-нибудь, любой текст. - написала текст
+11) + сохранить и выйти.- Ctrl+O   Ctrl+X
+12) Выйти из папки на уровень выше - cd ..
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.-- mv Wednesday.txt Friday.json ../Monday/
+ 14) скопировать любые 2 файла, которые вы создали, в любую другую папку.    cp Monday.txt Tuesday.txt ../Weekend/
+15) Найти файл по имени - sudo updatedb - locate Friday
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. - grep "понедельник" Monday.txt
+17) вывести несколько первых строк из текстового файла - head -n3 Monday.txt
+18) вывести несколько последних строк из текстового файла - tail -n3 Monday.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает - less /var/log/vboxadd-setup.log
+20) вывести дату и время - date
+=========
+Задание *
+1) Отправить http запрос на сервер.
+https://api.quarantine.country/api/v1/regionscurl --x POST https://api.quarantine.country/api/v1/regions
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+mkdir Week_nedelya
+cd Week_nedelya
+mkdir Weekdays Monday Weekend
+cd Weekdays
+touch Monday.txt Tuesday.txt Wednesday.txt Thursday.json Friday.json 
+mkdir Morning Day Evening
+ls -la
+       mv Wednesday.txt Friday.json ../Monday/
+
